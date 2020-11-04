@@ -21,13 +21,6 @@ if (isset($_POST["cari"])) {
 // 	var_dump($mhs);
 // }
 
-
-
-// tombol cari di tekan
-if (isset($_POST['cari'])) {
-	$mahasiswa = cari($_POST["keyword"]);
-}
-
 ?>
 
 <!DOCTYPE html>
