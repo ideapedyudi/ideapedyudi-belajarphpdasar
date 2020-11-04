@@ -1,7 +1,7 @@
 <?php
 
 require 'functions.php';
-$mahasiswa = query("SELECT * FROM mahasiswa");
+$mahasiswa = query("SELECT * FROM mahasiswa ORDER BY id DESC");
 // order by untuk meanmpilkan sesuai yang mana disitu id
 // asc menampilkan yang lama di atas
 // desc menampilkan yang baru di atas
@@ -52,7 +52,7 @@ if (isset($_POST["cari"])) {
 			<th>NRP</th>
 			<th>Nama</th>
 			<th>Email</th>
-			<th>Jurusan</th>
+			<th>Jurusan</th> 
 		</tr>
 
 		<?php $i = 1;
