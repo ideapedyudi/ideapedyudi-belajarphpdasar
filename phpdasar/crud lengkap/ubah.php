@@ -9,6 +9,12 @@ if (!isset($_SESSION["login"])) {
 
 require 'functions.php';
 
+// cek id ada apa tidak
+if (!isset($_GET["id"])) {
+  header("Location: index.php");
+  exit;
+}
+
 // ambil data di URL
 $id = $_GET["id"];
 
