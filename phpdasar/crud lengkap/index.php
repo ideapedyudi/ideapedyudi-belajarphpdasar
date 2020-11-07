@@ -11,6 +11,7 @@ require 'functions.php';
 
 // pagination
 // konfigurasi
+
 $jumlahDataPerhalaman = 3;
 $jumlahData = count(query("SELECT * FROM mahasiswa"));
 $jumlahHalaman = ceil($jumlahData / $jumlahDataPerhalaman);
@@ -64,7 +65,6 @@ if (isset($_POST["cari"])) {
 	</form><br>
 
 	<!-- navigasi -->
-	<?php if (!isset($_POST['cari'])) :?>
 	<!-- prev -->
 	<div class="pagination">
 		<?php if($halamanAktif > 1) : ?>
@@ -85,7 +85,6 @@ if (isset($_POST["cari"])) {
 		<a href="?halaman=<?= $halamanAktif + 1  ?> ">&raquo;</a>
 		<?php endif; ?>
 	</div>
-		<?php endif; ?>
 
 	<table border="1" cellpadding="10" cellspacing="0">
 		<tr>
